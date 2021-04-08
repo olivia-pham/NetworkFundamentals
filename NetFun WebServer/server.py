@@ -1,5 +1,6 @@
 #import socket module
 from socket import *
+import sys
 serverSocket = socket(AF_INET, SOCK_STREAM)
 #Prepare a server socket
 serverPort = 80
@@ -29,5 +30,5 @@ while True:
         print("404 Error not Found")
         #Close client socket
         connectionSocket.close()
-serverSocket.close()
-sys.exit()
+    serverSocket.close()
+    sys.exit()
